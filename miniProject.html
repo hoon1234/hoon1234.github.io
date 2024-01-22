@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="miniProject.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jejumap.css">
+    <link rel="stylesheet" href="modalcss.css">
+    <link rel="stylesheet" href="image-list.css">
+    <title>HODU 랜딩페이지</title>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <img src="img/Logo-fin.png" class="logo" id="hodu">
+        <a href="https://www.estsoft.ai" class="est" alt="이스트소프트 바로가기">이스트소프트</a>
+        <ul class="nav_ul">
+            <li><a href="#hodu01">HOME</a></li>
+            <li><a href="#pictures">About</a></li>
+            <li><a href="#where">Support</a></li>
+            <li><input type="button" id="top_download" class="top_download" onclick="download()" value="Download" /></li>
+
+        </ul>
+
+        <img src="img/nav_title.png" class="nav_title">
+        <img src="img/nav_small.png" class="nav_small">
+        <img src="img/img_cat_png.png" class="nav_cat">
+        <input type="button" id="nav_download" class="nav_download" onclick="download()" value="Download" />
+    </nav>
+</header>
+
+<main>
+    <section id="hodu01">
+        <img src="img/main_cat.png" class="main_cat">
+        <img src="img/main_01.png" class="main01">
+        <img src="img/main_02.png" class="main02">
+    </section>
+    <section>
+        <img src="img/main_03.png" class="main03">
+        <img src="img/main_04.png" class="main04">
+    </section>
+    <section>
+        <table class="pictures" id="pictures">
+            <tr>
+                <td class="one"></td>
+                <td class="two"></td>
+                <td class="three"></td>
+            </tr>
+            <tr>
+                <td class="four"></td>
+                <td class="five"></td>
+                <td class="six"></td>
+            </tr>
+        </table>
+    </section>
+    <section class="exploring">
+        <p class="continue">Continue exploring HODU</p>
+        <input type="button" id="main_button" class="main_button" onclick="showmore()" value="Show more" />
+
+        <div class="image_list" id="image_list">
+            <section>
+                <ul class="card-list">
+                    <li class="card">
+                        <img class="card__image" src="img/cat08.png" />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat10.jpg" />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat11.jpg"  />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat12.jpg"  />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat08.png"  />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat12.jpg"  />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat02.png" />
+                    </li>
+                    <li class="card">
+                        <img class="card__image" src="img/cat04.png" />
+                    </li>
+                </ul>
+            </section>
+            <div id="endList"></div>
+        </div>
+
+    </section>
+    <hr class="hr">
+    <section> <!-- 카카오맵 api 적용 -->
+        <img src="img/Where%20you’ll%20be.png" class="where" id="where">
+        <img src="img/jeju.png" class="jeju">
+        <!-- 지도를 표시할 div 입니다 -->
+        <div id="map" class="jejumap"></div>
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=abd072bf084733579d0967df8fd21c15"></script>
+    </section>
+    <section>
+        <div class="post">
+            <img src="img/Subscribe%20to%20our%20Blog%20post.png" class="subscribe">
+            <img src="img/Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text.png" class="Lorem">
+            <div class="email">
+                <img src="img/mail.png" class="mail">
+                <form action="#" method="post">
+                    <input type="text" placeholder="Enter your e-mail address" class="emailaddress"
+                           onchange="valiFormEmail(this)">
+                </form>
+
+
+                <button type="submit" class="modal-Btn">Subscribe</button> <!-- 모달창 구현 -->
+                <dialog class="modal">
+                    <main class="thankyou">
+                        <section>
+                            <img src="img/modalcat.png" class="modalcat">
+                        </section>
+                        <section>
+                            <p class="modaltext01">Thank you!</p>
+                            <p class="modaltext02">Lorem Ipsum is simply dummy text of the printing industry. </p>
+                            <button type="submit" class="close">OK! I love HODU</button>
+                        </section>
+                    </main>
+                </dialog>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- JS 연결 모음    -->
+<script type="text/javascript" src="jejumap.js"></script>
+<script src="modal.js"></script>
+<script src="miniProject.js"></script>
+<script src="image-list.js"></script>
+
+
+<footer>
+    <img src="img/footercat.png" class="footercat">
+
+    <a href="https://www.estsoft.ai" alt="HODU">
+        <img src="img/Logo-fin.png" class="footerlogo">
+    </a>
+    <ul class="footerlink">
+        <li>
+            <a href="https://www.naver.com">
+                <img src="img/icon-blog.png" class="blog"> </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com">
+                <img src="img/icon-insta.png" class="insta"> </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com">
+                <img src="img/icon-facebook.png" class="facebook"> </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@estsoft_official">
+                <img src="img/icon-youtube.png" class="youtube"> </a>
+        </li>
+    </ul>
+    <a href="#hodu">  <!-- 맨 위쪽이동 화살표 구현 -->
+        <div><input  type="button" class="arrow_up" onclick="clickme()"></div>
+    </a>
+</footer>
+</body>
+</html>
