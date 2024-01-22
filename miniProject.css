@@ -1,0 +1,386 @@
+/* Simple Reset CSS */
+/** {*/
+/*    margin: 0; padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+header {
+
+    background-color: #F2E9D8;
+    height: 900px;
+    width: 2000px;
+
+}
+
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 320px;
+
+}
+
+.est{
+    color: blue;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    left: 460px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.nav{
+    position: absolute;
+    width: 1920px;
+    height: 102px;
+    top: 2px;
+    cursor: pointer;
+}
+
+.top_download{
+    border-radius: 40px;
+    background-color: peru;
+    color: white;
+    border: peru;
+    width: 90px;
+    height: 30px;
+}
+
+.nav_ul{
+    position: absolute;
+    left: 1185px;
+    list-style-type: none;
+    font-family: 'Dongle', sans-serif;
+    font-size: 40px;
+}
+
+li{
+    float: left;
+    margin-right: 20px;
+
+}
+.nav_title{
+    position: absolute;
+    top: 304px;
+    left: 320px;
+    height: 120px;
+    width: 695px;
+}
+
+.nav_small{
+    position: absolute;
+    top: 464px;
+    left: 320px;
+    width: 420px;
+    height: 86px;
+}
+
+.nav_cat {
+    position: absolute;
+    width: 415px;
+    height: 766px;
+    top: 136px;
+    left: 1185px;
+}
+
+.nav_download{
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    top: 590px;
+    left: 320px;
+    border-radius: 40px;
+    background-color: peru;
+    color: white;
+    border: peru;
+}
+
+.main_cat{
+    position: absolute;
+    top: 1060px;
+    left: 320px;
+}
+.main01{
+    position: absolute;
+    top: 1152px;
+    left: 1090px;
+    width: 510px;
+    height: 135px;
+}
+
+.main02{
+    position: absolute;
+    top: 1317px;
+    left: 1090px;
+    width: 510px;
+    height: 40px;
+}
+
+.main03{
+    position: absolute;
+    top: 1570px;
+    left: 523px;
+    width: 875px;
+    height: 60px;
+}
+
+.main04{
+    position: absolute;
+    top: 1670px;
+    left: 605px;
+    width: 710px;
+    height: 42px;
+}
+
+.exploring{
+    position: absolute;
+    top: 2700px;
+    left: 815px;
+    gap: 28px;
+}
+
+.continue{
+    width: 400px;
+    height: 20px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    line-height: 30px;
+    color: black;
+}
+
+
+
+.main_button{
+    position: absolute;
+    left: 90px;
+    top: 80px;
+    width: 143px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: peru;
+    color: white;
+    border: peru;
+    font-size: 17px;
+}
+
+.closebutton{
+    position: absolute;
+    width: 100px;
+    top: 25px;
+    right: 50px;
+}
+.hr{
+    position: absolute;
+    top: 2900px;
+    left: 320px;
+    width: 1278px;
+    height: 1px;
+    color: #C4C4C4;
+}
+
+.where{
+    position: absolute;
+    width: 263px;
+    height: 45px;
+    top: 2950px;
+    left: 320px;
+}
+
+.jeju{
+    position: absolute;
+    top: 3000px;
+    left: 320px;
+    width: 395px;
+    height: 20px;
+}
+.mapclick{
+    position: absolute;
+    top: 3200px;
+    left: 320px;
+}
+.jejumap{
+    position: absolute;
+    top: 3112px;
+    width:1280px;
+    height:520px;
+    left:320px;
+
+}
+
+.post{
+    border: 1px solid black;
+    background-color: #000080;
+    position: absolute;
+    top: 3700px;
+    left: 320px;
+    width: 1300px;
+    height: 200px;
+    border-radius: 25px;
+    z-index: 900;
+}
+
+.subscribe{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+}
+
+.Lorem{
+    position: absolute;
+    top: 120px;
+    left: 70px;
+}
+
+.email{
+    position: absolute;
+    background-color: white;
+    top: 70px;
+    left: 692px;
+    width: 530px;
+    height: 60px;
+    border-radius: 60px;
+}
+
+.mail{
+    position: absolute;
+    top: 18px;
+    left: 30px;
+}
+
+.emailaddress{
+    position: absolute;
+    top: 23px;
+    left: 80px;
+    border: 0px white;
+}
+
+.modal-Btn{
+    position: absolute;
+    top: 6px;
+    left: 390px;
+    width: 135px;
+    height: 50px;
+    border: 1px solid peru;
+    background-color: peru;
+    border-radius: 35px;
+    color: white;
+}
+
+footer{
+
+}
+
+.footercat{
+    position: absolute;
+    width: 1920px;
+    height: 340px;
+    top: 3819px;
+    z-index: 100;
+}
+
+.footerlogo{
+    position: absolute;
+    width: 226px;
+    height: 70px;
+    top: 4200px;
+    left: 320px;
+}
+
+.footerlink{
+    position: absolute;
+    top: 4200px;
+    left: 1350px;
+    list-style-type: none;
+}
+
+
+
+.arrow_up{
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    width: 80px;
+    height: 80px;
+    border-radius: 80%;
+    background-image:url('img/keyboard_arrow_up.png');
+    background-size: cover;
+    border: 1px solid transparent; /* 투명하게 처리 */
+    z-index: 2;
+}
+
+.pictures{
+    position: absolute;
+    top: 1800px;
+    left: 250px;
+    border: 1px solid transparent; /* 투명하게 처리 */
+    width: 1500px;
+    height: 900px;
+    border-collapse: separate;
+    border-spacing: 50px 50px;
+}
+.image_list{
+    position: absolute;
+    top: 200px;
+    left: 5px;
+    width: 1500px;
+    border: 1px solid transparent; /* 투명하게 처리 */
+    z-index: 700;
+    display: none;
+    list-style-type: none;
+}
+
+
+.one{
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat01.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
+.two{
+
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat02.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
+.three{
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat03.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
+.four{
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat04.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
+.five{
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat05.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
+.six{
+    border: 1px solid transparent; /* 투명하게 처리 */
+    border-radius: 30px;
+    background-image:url('img/cat06.png');
+    background-size: cover;
+    width: 378px;
+    height: 378px;
+}
