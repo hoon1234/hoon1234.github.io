@@ -63,3 +63,149 @@ function validEmail(obj){
     return (obj.value.match(pattern) != null);
 }
 
+// 여기까지 index.html js파일
+
+const makeSpinner = () => {
+    const spinner = document.createElement('div');
+    const spinnerImage = document.createElement('img');
+    spinner.classList.add('loading');
+    spinnerImage.setAttribute('src', 'https://picsum.photos/v2/list?page=2&limit=100');
+    spinnerImage.classList.add('spinner');
+    spinner.appendChild(spinnerImage);
+    return spinner;
+};
+
+const makeSkeleton = () => {
+    const skeleton = document.createElement('li');
+    const skeletonImage = document.createElement('div');
+    const skeletonText = document.createElement('p');
+    skeleton.classList.add('skeleton');
+    skeletonImage.classList.add('skeleton__image');
+    skeletonText.classList.add('skeleton__text');
+    skeletonText.textContent = ' ';
+    skeleton.appendChild(skeletonImage);
+    skeleton.appendChild(skeletonText);
+    return skeleton;
+};
+
+const list = document.querySelector('.card-list');
+const items = document.querySelectorAll('.card');
+const skeletonItems = Array.from({ length: items.length }, () =>
+    makeSkeleton()
+);
+const spinner = makeSpinner();
+
+const addSkeleton = () => {
+    skeletonItems.forEach((item) => list.appendChild(item));
+};
+
+const removeSkeleton = () => {
+    skeletonItems.forEach((item) => list.removeChild(item));
+};
+
+const loadingStart = () => {
+    addSkeleton();
+    list.appendChild(spinner);
+};
+
+const loadingFinish = () => {
+    removeSkeleton();
+    list.removeChild(spinner);
+};
+
+const addNewContent = () => {
+    items.forEach((item) => list.appendChild(item.cloneNode(true)));
+};
+
+const ioCallback = (entries, io) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            io.unobserve(entry.target);
+            loadingStart();
+            setTimeout(() => {
+                addNewContent();
+                loadingFinish();
+                observeLastItem(io, document.querySelectorAll('.card'));
+            }, 2000);
+        }
+    });
+};
+
+const observeLastItem = (io, items) => {
+    const lastItem = items[items.length - 1];
+    io.observe(lastItem);
+};
+
+const io = new IntersectionObserver(ioCallback, { threshold: 0.7 });
+observeLastItem(io, items);
+
+// image-list.js파일
+
+const imageList = document.querySelector(".image-list");
+let pageToFetch = 1;
+
+
+
+
+async function fetchImages(pageNum){
+    try {
+        const response = await fetch('https://picsum.photos/v2/list?page='+pageNum+'&limit=5');
+        if (!response.ok) {
+            throw new Error('네트워크 응답에 문제가 있습니다.');
+        }
+
+        const datas = await response.json();
+        console.log(datas);
+
+        makeImageList(datas);
+
+    } catch (error) {
+        console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
+    }
+}
+
+function  makeImageList(datas){
+    datas.forEach((item)=>{
+        imageList.innerHTML += "<li><img src=" + item.download_url +" alt=''></li>";
+    });
+}
+
+window.addEventListener('scroll', ()=>{
+    // 스크롤이 상단으로부터 얼마나 이동했는지 알아야 한다. (뷰포트의 높이 + 스크롤되높ㅇ)
+
+    // 화면에 로딩딘 페이지의 전체 높이
+
+    // 뷰포트의 높이 + 스크롤된  길이 + 10 === 화면에 로딩된 페이지의 전체 높이
+
+    if(window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight){
+        fetchImages(pageToFetch += 1); //pageToFetch ++도 가능
+    }
+});
+
+fetchImages();
+
+// 여기까지 main_button.js파일
+
+const modalBtn = document.querySelector(".modal-Btn");
+const modal = document.querySelector(".modal");
+
+modalBtn.addEventListener("click", () => {
+    modal.showModal()
+})
+
+const closeBtn = modal.querySelector(".close")
+closeBtn.addEventListener("click", e => {
+    modal.style.display = "none"
+});
+// 여기까지 modal.js 파일
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    mapOption = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);
+
+//여기까지 jejumap.js 파일
