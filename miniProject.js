@@ -142,19 +142,6 @@ observeLastItem(io, items);
 // image-list.js파일
 
 
-const modalBtn = document.querySelector(".modal-Btn");
-const modal = document.querySelector(".modal");
-
-modalBtn.addEventListener("click", () => {
-    modal.showModal()
-})
-
-const closeBtn = modal.querySelector(".close")
-closeBtn.addEventListener("click", e => {
-    modal.style.display = "none"
-});
-// 여기까지 modal.js 파일
-
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
