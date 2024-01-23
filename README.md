@@ -25,6 +25,11 @@
 
 ![image](https://github.com/hoon1234/hoon1234.github.io/assets/85986176/b6d983ff-d730-41e0-8de0-31aa1d4f6cc8)
 
+<li> Subscribe 버튼 클릭시, 모달창 구현</li>
+
+![image](https://github.com/hoon1234/hoon1234.github.io/assets/85986176/5557e2c4-7bc6-445d-91a8-5e6e4c6b9ef4)
+
+
 <li> 상단 이동 버튼 구현 </li>
 
 ![image](https://github.com/hoon1234/hoon1234.github.io/assets/85986176/32e6e82f-ed64-4d5b-821f-2a192a5996ab)
