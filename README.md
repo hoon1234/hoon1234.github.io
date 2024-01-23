@@ -4,7 +4,7 @@
 
 ![image](https://github.com/hoon1234/hoon1234.github.io/assets/85986176/1c346a2d-fdb1-4b32-98a4-8dcd9ee31f5b)
 
-<li> 메인 이미지 옆 '이스트소프트' 로고 첨가</li>
+<li> 메인 이미지 옆 '이스트소프트' 로고 첨부</li>
 
 ![image](https://github.com/hoon1234/hoon1234.github.io/assets/85986176/5b74a587-2753-46c0-adf5-cb07f9a314c8)
 
