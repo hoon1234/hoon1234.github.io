@@ -1,6 +1,6 @@
 function clickme() {
     window.scrollTo({top:0, left:0, behavior:'smooth'});
-}
+};
 
 function showmore() {
 
@@ -15,7 +15,7 @@ function showmore() {
     else {
         image_list.style.display = 'block';
     }
-}
+};
 
 const makeSpinner = () => {
     const spinner = document.createElement('div');
