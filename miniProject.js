@@ -17,54 +17,6 @@ function showmore() {
     }
 }
 
-
-function download(){
-    alert('다운로드가 되었습니다.');
-}
-
-// function  emailCheck() {
-//     alert('이메일이 확인 되었습니다.');
-// }
-
-
-function valiFormEmail(obj){
-    if(validEmail(obj) == false){
-        alert("올바른 이메일 주소를 입력하세요.");
-        obj.value = '';
-        obj.focus();
-        return false;
-    } else{
-        alert('이메일 입력이 확인 되었습니다.');
-    }
-}
-
-const input_email = document.querySelector('#emailchange');
-/**
- * const input_email = document.getElementById('emailchange');
- */
-
-input_email.addEventListener('change', (e) => {
-    valiFormEmail(e.target);
-});
-
-
-// input_email.addEventListener('change', updateValue);
-// function updateValue(e) {
-// 	valiFormEmail(e.target);
-// }
-
-
-function validEmail(obj){
-    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    // var pattern = new RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
-    // var pattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/;
-    // var pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
-    // return pattern.test(obj.value);
-    return (obj.value.match(pattern) != null);
-}
-
-// 여기까지 index.html js파일
-
 const makeSpinner = () => {
     const spinner = document.createElement('div');
     const spinnerImage = document.createElement('img');
@@ -140,6 +92,56 @@ const io = new IntersectionObserver(ioCallback, { threshold: 0.7 });
 observeLastItem(io, items);
 
 // image-list.js파일
+
+
+function download(){
+    alert('다운로드가 되었습니다.');
+}
+
+// function  emailCheck() {
+//     alert('이메일이 확인 되었습니다.');
+// }
+
+
+function valiFormEmail(obj){
+    if(validEmail(obj) == false){
+        alert("올바른 이메일 주소를 입력하세요.");
+        obj.value = '';
+        obj.focus();
+        return false;
+    } else{
+        alert('이메일 입력이 확인 되었습니다.');
+    }
+}
+
+const input_email = document.querySelector('#emailchange');
+/**
+ * const input_email = document.getElementById('emailchange');
+ */
+
+input_email.addEventListener('change', (e) => {
+    valiFormEmail(e.target);
+});
+
+
+// input_email.addEventListener('change', updateValue);
+// function updateValue(e) {
+// 	valiFormEmail(e.target);
+// }
+
+
+function validEmail(obj){
+    var pattern = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    // var pattern = new RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
+    // var pattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/;
+    // var pattern = new RegExp(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/);
+    // return pattern.test(obj.value);
+    return (obj.value.match(pattern) != null);
+}
+
+// 여기까지 index.html js파일
+
+
 
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div
